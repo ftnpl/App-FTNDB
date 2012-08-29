@@ -7,9 +7,6 @@ bin/ftndb-admin
 bin/ftndb-nodelist
 doc/History
 lib/FTNDB.pm
-lib/FTN/Database.pm
-lib/FTN/Database/Nodelist.pm
-lib/FTN/Database/ToDo.pod
 lib/FTNDB/Config.pod
 lib/FTNDB/Nodelist.pm
 lib/FTNDB/ToDo.pod
