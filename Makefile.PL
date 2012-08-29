@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'FTN-Database',
+    NAME                => 'ftndb',
     AUTHOR              => 'Robert James Clay <jame@rocasa.us>',
     VERSION_FROM        => 'lib/FTNDB.pm',
     ABSTRACT_FROM       => 'lib/FTNDB.pm',
@@ -20,8 +20,9 @@ WriteMakefile(
         'DBD::SQLite'           => 0,
         'Getopt::Std'           => 0,
         'File::Spec'            => 0,
+        'FTN::Database'         => 0.34,
         'FTN::Log'              => 0.02,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'FTN-Database-*' },
+    clean               => { FILES => 'ftndb-*' },
 );
