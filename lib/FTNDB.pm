@@ -29,9 +29,9 @@ application.
 =head1 EXAMPLES
 
 Given that $CFGFILE is a configuration file, the following command line can be
-used to create an FTN Nodelist table in that database file:
+used to drop an FTN database table FTNTable:
 
-C<ftndbadm -c $CFGFILE -v create table Nodelist> 
+C<ftndbadm -c $CFGFILE -v drop table FTNTable> 
 
 
 =head1 AUTHOR
@@ -47,9 +47,9 @@ and then you'll automatically be notified of progress on your bug
 as I make changes.
 
 Note that you can also report any bugs or feature requests to
-C<bug-ftn-database at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=FTN-Database>;
-however, the FTN-Database Issue tracker is preferred.
+C<bug-ftndb at rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+however, the ftndb Issue tracker is preferred.
 
 
 =head1 SUPPORT
@@ -62,17 +62,17 @@ You can also look for information at:
 
 =over 4
 
-=item * FTN-Database issue tracker
+=item * FTN Database application issue tracker
 
 L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=FTN-Database>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/FTN-Database>
+L<http://search.cpan.org/dist/ftndb>
 
 =back
 
@@ -80,7 +80,7 @@ L<http://search.cpan.org/dist/FTN-Database>
 =head1 SEE ALSO
 
  L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTN::Database>, L<FTNDB::Nodelist>
+  L<FTNDB::Command::drop>, L<FTNDB::Nodelist>, L<FTN::Database>, L<FTN::Database::Nodelist>
 
 =head1 COPYRIGHT & LICENSE
 
