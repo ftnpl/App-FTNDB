@@ -30,7 +30,7 @@ C<ftndbadm -c config_file [options] create table name>
 This will create a nodelist table in an SQL database being used
 for Fidonet/FTN nodelist processing, where I<name> is the name
 of the table to be created. If it already exists, it will be
-dropped it first before going on to create it again.
+dropped first before going on to create it again.
 
 =back
 
@@ -73,9 +73,10 @@ and then you'll automatically be notified of progress on your bug
 as I make changes.
 
 Note that you can also report any bugs or feature requests to
-C<bug-ftn-database at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=FTN-Database>;
-however, the FTN-Database Issue tracker is preferred.
+C<bug-ftndb at rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+however, the FTN Database application Issue tracker at the 
+SourceForge project is preferred.
 
 
 =head1 SUPPORT
@@ -89,25 +90,25 @@ You can also look for information at:
 
 =over 4
 
-=item * FTN-Database issue tracker
+=item * FTN Database application issue tracker
 
 L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=FTN-Database>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/FTN-Database>
+L<http://search.cpan.org/dist/ftndb>
 
 =back
 
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTN::Database>, L<FTN::Database::Nodelist>
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::drop>,
+  L<FTN::Database>, L<FTN::Database::Nodelist>
 
 
 =head1 COPYRIGHT & LICENSE
