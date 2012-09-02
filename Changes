@@ -1,7 +1,8 @@
 Revision history for FTN Database application (ftndb)
 
-0.35    Sat Sep dd hh:mm 2012
-    - Start development for v0.35
+0.35    Sat Sep  2 17:22 2012
+    - Add the '-or9" ZIPFLAGS WriteMakefile dist parameter in Makefile.PL 
+    - Change to use the ABSTRACT keyword instead of ABSTRACT_FROM in Makefile.PL.
 
 0.34    Sat Sep  1 09:55 2012
     - Separate out the FTN::Database Perl Modules and the FTN Database application
