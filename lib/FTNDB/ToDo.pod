@@ -3,27 +3,27 @@
 
 =head2 General
 
-
-Although the NAME entry is present, getting the following warning:
-    $ perl Makefile.PL
-    WARNING: Setting ABSTRACT via file 'lib/FTNDB.pm' failed
+Create FTNDB::Examples for example configuration files and scripts?
 
 Move code repository information and the distribution archive information
-from the README file to elsewhere.  POD in main module?  website and/or wiki?
+from the README file to elsewhere;  POD in modules and scripts is where
+I've been putting it, so the README really only needs to reference the 
+documentation.
 
-Add an option, like -r, for specifying a region number;  to be used like the
+Add an option, like -r, for specifying a region number; to be used like the
 zone (-z) or net (-n) options, and available to all commands as needed.
-
-Create FTNDB::Examples for example configuration files and scripts?
 
 Add script option for referencing an sql string for things like defining a table
 or other definitions.  Is "-s" already being used?
-.
+
+Use Test::Database in test scripts?
+
 
 =head2 ftndbadm
 
 Develop a new version of the ftndb-admin script, basing it on App::Cmd and at
-least initially having the name ftndbadm.
+least initially having the name ftndbadm.  Move the functionality currently
+in the ftndb-admin script to the new ftndbadm script.
 
 
 =head2 FTNDB::Command::drop.pm
@@ -41,7 +41,8 @@ As part of the transition to using App::Cmd; move the functionality for the
 I<create> command from bin/ftndb-admin to the new module for the create command.
 
 Add a command line option to reference a file containing the definition of a
-nodelist table; perhaps also add a configuration option for the same thing?
+nodelist table ("-s" as noted above?); perhaps also add a configuration option
+for the same thing?
 
 
 =head2 FTNDB::Nodelist
@@ -56,6 +57,8 @@ FTN::Nodelist.)
 
 Add a function that checks if an ftnyear:yearday combination is already in the
 database. Check for the ftnyear first; if that is present, then check yearday?
+Or should such a function be in FTN::Database::Nodelist, as that is a database
+function?
 
 Derive and move function to insert or update an entry from ftndb-nodelist.
 Separate functions for insert & update, or different options in same function?
@@ -80,7 +83,8 @@ in the database;  example 2:2/0 is being set to region 19, or 1:1/0
 which is being set to 0.  Should be set to the same as the zone number.
 
 Need to add something to the database to reflect nodes being under a hub?
-(If there are no hub nodes in a particular net, then effectively the hub
+Or otherwise reflect the actual order of the nodes listed in a net? (If
+there are no hub nodes in a particular net, then effectively the hub
 node for them all is the host node.)
 
 Move code for processing the -f & -e options into a separate subroutine, so
@@ -122,17 +126,6 @@ header (extra line)?
 
 Remove the ftndb-admin script from the distribution once its functionality has
 been moved to ftndbadm.
-
-
-=head2 Testing
-
-
-    - Procedure in test script?
-    1) get temp directory
-    2) create working directory there
-    3) ... testing ...
-    4) remove test working directory
-    5) done
 
 
 =head1 SEE ALSO
