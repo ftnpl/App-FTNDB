@@ -23,6 +23,6 @@ WriteMakefile(
         'FTN::Database'         => 0.34,
         'FTN::Log'              => 0.02,
     },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', ZIPFLAGS => '-or9', },
     clean               => { FILES => 'ftndb-*' },
 );
