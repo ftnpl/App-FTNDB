@@ -6,8 +6,8 @@ WriteMakefile(
     NAME                => 'ftndb',
     AUTHOR              => 'Robert James Clay <jame@rocasa.us>',
     VERSION_FROM        => 'lib/FTNDB.pm',
-    ABSTRACT_FROM       => 'lib/FTNDB.pm',
-    LICENSE        	=> 'perl',
+    ABSTRACT            => 'Application for Fidonet/FTN related processing in an SQL database supported by a Perl DBD module.',
+    LICENSE             => 'perl',
     EXE_FILES           => [ qw( bin/ftndbadm bin/ftndb-admin bin/ftndb-nodelist ) ],
     PL_FILES            => {},
     PREREQ_PM => {
