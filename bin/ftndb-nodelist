@@ -413,8 +413,8 @@ sub load_ftn_nodelist {
     #   Build SQL Statement for Prepare
     $sql_statement = "INSERT INTO $table_name ";
     $sql_statement .= '(type,zone,net,node,point,region,name,';
-    $sql_statement .= 'location,sysop,phone,baud,flags,domain,source) ';
-    $sql_statement .= 'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    $sql_statement .= 'location,sysop,phone,baud,flags,domain,ftnyear,yearday,source) ';
+    $sql_statement .= 'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     my $insert_handle = $db_handle->prepare($sql_statement);
 
@@ -471,7 +471,7 @@ sub load_ftn_nodelist {
 
     #       Execute the insert SQL statment
     $insert_handle->execute($type, $zone, $net, $node, $point, $region,
-         $name, $location, $sysop, $phone, $bps, $flags, $domain, $nodelist_file)
+         $name, $location, $sysop, $phone, $bps, $flags, $domain, $nl_info{'Year'}, $nl_info{'YearDay'}, $nodelist_file)
         or die logging($log_file, $log_id, $DBI::errstr);
 
     }
