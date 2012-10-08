@@ -135,10 +135,14 @@ sub get_nodelist_header {
 
     my $nodelist_file = @_;
 
-    my %header;
+    my (%header, $nl);
+
+    # Read in the first line of the nodelist file.
+    open $nl, q{<}, $nodelist_file or croak "Cannot open $nodelist_file";
+    my $header_line = <$nl>;
+    close $nl;
 
     return %header;
-
 }
 
 =head1 EXAMPLES
