@@ -137,6 +137,9 @@ sub get_nodelist_header {
 
     my (%header, $nl);
 
+    use File::Basename;
+    my($file_name, $file_dir, $file_suffix) = fileparse($nodelist_file, qr/[^.]*/);
+
     use File::stat;
     my $fs = stat($nodelist_file);
 
