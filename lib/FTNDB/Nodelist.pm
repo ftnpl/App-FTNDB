@@ -163,25 +163,31 @@ sub nodelist_file_info {
 
     my $nodelist_file = @_;
 
-    my (%header, $nl);
+    my (%info, $nl);
 
     use File::Basename;
-    my($file_name, $file_dir, $file_suffix) = fileparse($nodelist_file, qr/[^.]*/);
+    ( $info{'FileName'}, $info{'FileDir'}, $info{'FileSuffix'} ) = fileparse($nodelist_file, qr/[^.]*/);
 
     use File::stat;
     my $fs = stat($nodelist_file);
 
     #   year of the converted timestamp is the fifth item
-    my $file_year = (localtime($fs->mtime))[5] + 1900;
+    $info{'FileYear'} = (localtime($fs->mtime))[5] + 1900;
     #   yday of converted timestamp is the seventh item
-    my $file_yday = (localtime($fs->mtime))[7] + 1;
+    $info{'FileYDay'} = (localtime($fs->mtime))[7] + 1;
 
     # Read in the first line of the nodelist file.
     open $nl, q{<}, $nodelist_file or croak "Cannot open $nodelist_file";
-    my $header_line = <$nl>;
+    $info{'HeaderLine'} = <$nl>;
     close $nl;
 
-    return %header;
+    #   Year key defaults to the four digit year from the nodelist file timestamp.
+    $info{'Year'} = $info{'FileYear'};
+
+    #   YearDay key defaults to the nodelist file suffix.
+    $info{'YearDay'} = $info{'FileSuffix'};
+
+    return %info;
 }
 
 =head1 EXAMPLES
