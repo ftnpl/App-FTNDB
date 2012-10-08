@@ -250,7 +250,9 @@ if ($opt_o) {
 =item load 
 
 This will load an FTN Nodelist database table in an SQL database
-server being used for Fidonet/FTN processing.
+server being used for Fidonet/FTN processing. Note that it does
+not currently check if a nodelist for the same domain, year, and
+year day is already in the database.
 
 =item list
 
