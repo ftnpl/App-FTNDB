@@ -122,6 +122,25 @@ sub remove_ftn_domain {
 
 }
 
+=head2 get_nodelist_header
+
+Syntax:  %nodelist_header = get_nodelist_header($nodelist_file);
+
+Returns a hash containing the header information from a nodelist file when given
+the file name and path for an FTN nodelist file.
+
+=cut
+
+sub get_nodelist_header {
+
+    my $nodelist_file = @_;
+
+    my %header;
+
+    return %header;
+
+}
+
 =head1 EXAMPLES
 
 An example of opening an FTN database, then creating a nodelist table,
