@@ -400,14 +400,6 @@ sub load_ftn_nodelist {
     # connect to database
     $db_handle = FTN::Database::open_ftn_database(\%db_option);
 
-    #
-    if ($opt_v) {
-        logging($log_file, $log_id, "Deleteing old entries for '$domain'");
-    }
-
-    #   remove any and all entries where domain = $domain when doing an insert to the table
-    FTNDB::Nodelist::remove_ftn_domain($db_handle, $table_name, $domain);
-
     # drop the old nodelist table index 'ftnnode', if it exists.
     logging($log_file, $log_id, 'Dropping existing nodelist table index ftnnode if it already exists.');
     FTN::Database::drop_ftn_index($db_handle, 'ftnnode');
