@@ -10,11 +10,11 @@ FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
 
 =head1 VERSION
 
-Version 0.36
+Version 0.37
 
 =cut
 
-our $VERSION = '0.36';
+our $VERSION = '0.37';
 
 =head1 DESCRIPTION
 
@@ -161,7 +161,7 @@ The header line (first line) from the nodelist file as a string.
 
 sub nodelist_file_info {
 
-    my $nodelist_file = @_;
+    my $nodelist_file = shift;
 
     my (%info, $nl);
 

@@ -19,11 +19,11 @@ ftndb-nodelist - Fidonet/FTN Nodelist related processing using an SQL Database.
 
 =head1 VERSION
 
-Version 0.36
+Version 0.37
 
 =cut
 
-our $VERSION = '0.36';
+our $VERSION = '0.37';
 
 =head1 DESCRIPTION
 
@@ -88,7 +88,7 @@ $log_file = $ftndb_config->{_}->{LogFile};
 
 my $log_id = 'nl2db';
 
-logging($log_file, $log_id, 'Starting ftndb-nodelist... ');
+logging($log_file, $log_id, "Starting ftndb-nodelist $VERSION ... ");
 
 =item -v
 
@@ -250,7 +250,9 @@ if ($opt_o) {
 =item load 
 
 This will load an FTN Nodelist database table in an SQL database
-server being used for Fidonet/FTN processing.
+server being used for Fidonet/FTN processing. Note that it does
+not currently check if a nodelist for the same domain, year, and
+year day is already in the database.
 
 =item list
 
@@ -392,19 +394,13 @@ sub load_ftn_nodelist {
     logging($log_file, $log_id, "Nodelist directory: '$nodelist_directory'");
     logging($log_file, $log_id, "Nodelist file: '$nodelist_file'");
 
+    my %nl_info = FTNDB::Nodelist::nodelist_file_info("$nodelist_directory/$nodelist_file");
+
     open NODELIST, "$nodelist_directory/$nodelist_file"
     or die logging($log_file, $log_id, "Cannot open $nodelist_directory/$nodelist_file");
 
     # connect to database
     $db_handle = FTN::Database::open_ftn_database(\%db_option);
-
-    #
-    if ($opt_v) {
-        logging($log_file, $log_id, "Deleteing old entries for '$domain'");
-    }
-
-    #   remove any and all entries where domain = $domain when doing an insert to the table
-    FTNDB::Nodelist::remove_ftn_domain($db_handle, $table_name, $domain);
 
     # drop the old nodelist table index 'ftnnode', if it exists.
     logging($log_file, $log_id, 'Dropping existing nodelist table index ftnnode if it already exists.');
@@ -417,8 +413,8 @@ sub load_ftn_nodelist {
     #   Build SQL Statement for Prepare
     $sql_statement = "INSERT INTO $table_name ";
     $sql_statement .= '(type,zone,net,node,point,region,name,';
-    $sql_statement .= 'location,sysop,phone,baud,flags,domain,source) ';
-    $sql_statement .= 'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    $sql_statement .= 'location,sysop,phone,baud,flags,domain,ftnyear,yearday,source) ';
+    $sql_statement .= 'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     my $insert_handle = $db_handle->prepare($sql_statement);
 
@@ -475,7 +471,7 @@ sub load_ftn_nodelist {
 
     #       Execute the insert SQL statment
     $insert_handle->execute($type, $zone, $net, $node, $point, $region,
-         $name, $location, $sysop, $phone, $bps, $flags, $domain, $nodelist_file)
+         $name, $location, $sysop, $phone, $bps, $flags, $domain, $nl_info{'Year'}, $nl_info{'YearDay'}, $nodelist_file)
         or die logging($log_file, $log_id, $DBI::errstr);
 
     }
