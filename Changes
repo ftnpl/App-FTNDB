@@ -1,5 +1,9 @@
 Revision history for FTN Database application (ftndb)
 
+0.36    Mon Oct  8 11:26 2012
+    - Add a nodelist_file_info function to lib/FTNDB/Nodelist.pm for providing
+      information for a nodelist file.
+
 0.35    Sat Sep  2 17:22 2012
     - Add the '-or9" ZIPFLAGS WriteMakefile dist parameter in Makefile.PL 
     - Change to use the ABSTRACT keyword instead of ABSTRACT_FROM in Makefile.PL.

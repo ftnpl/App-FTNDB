@@ -10,11 +10,11 @@ FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
 
 =head1 VERSION
 
-Version 0.35
+Version 0.36
 
 =cut
 
-our $VERSION = '0.35';
+our $VERSION = '0.36';
 
 =head1 DESCRIPTION
 
@@ -25,7 +25,8 @@ SQL database engine is one for which a DBD module exists, defaulting to SQLite.
 =head1 EXPORT
 
 The following functions are available in this module:  create_nodelist_table(),
-drop_nodelist_table(), create_ftnnode_index(), remove_ftn_domain().
+drop_nodelist_table(), create_ftnnode_index(), remove_ftn_domain(),
+nodelist_file_info().
 
 =head1 FUNCTIONS
 
@@ -120,6 +121,73 @@ sub remove_ftn_domain {
 
     return(0);
 
+}
+
+=head2 nodelist_file_info
+
+Syntax:  %nodelist_info = nodelist_file_info($nodelist_file);
+
+Returns a hash containing the header and other information for a nodelist file
+when given the file name and path for an FTN nodelist file. The possible keys
+returned in the hash are as follows:
+
+=over 4
+
+=item Year
+
+The four digit year from the nodelist file header line. Defaults to the year
+number from the nodelist file time stamp.
+
+=item YearDay
+
+The year day number from the nodelist file header line. Defaults to the file
+suffix of the nodelist, which is assumed to be a three digit number.
+
+=item FileYear
+
+The four digit year number from the timestamp of the nodelist file.
+
+=item FileYDay
+
+The year day number from the timestamp of the nodelist file.
+
+=item HeaderLine
+
+The header line (first line) from the nodelist file as a string.
+
+=back
+
+=cut
+
+sub nodelist_file_info {
+
+    my $nodelist_file = @_;
+
+    my (%info, $nl);
+
+    use File::Basename;
+    ( $info{'FileName'}, $info{'FileDir'}, $info{'FileSuffix'} ) = fileparse($nodelist_file, qr/[^.]*/);
+
+    use File::stat;
+    my $fs = stat($nodelist_file);
+
+    #   year of the converted timestamp is the fifth item
+    $info{'FileYear'} = (localtime($fs->mtime))[5] + 1900;
+    #   yday of converted timestamp is the seventh item
+    $info{'FileYDay'} = (localtime($fs->mtime))[7] + 1;
+
+    # Read in the first line of the nodelist file.
+    open $nl, q{<}, $nodelist_file or croak "Cannot open $nodelist_file";
+    $info{'HeaderLine'} = <$nl>;
+    close $nl;
+
+    #   Year key defaults to the four digit year from the nodelist file timestamp.
+    $info{'Year'} = $info{'FileYear'};
+
+    #   YearDay key defaults to the nodelist file suffix.
+    $info{'YearDay'} = $info{'FileSuffix'};
+
+    return %info;
 }
 
 =head1 EXAMPLES
