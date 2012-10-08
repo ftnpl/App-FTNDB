@@ -88,7 +88,7 @@ $log_file = $ftndb_config->{_}->{LogFile};
 
 my $log_id = 'nl2db';
 
-logging($log_file, $log_id, 'Starting ftndb-nodelist... ');
+logging($log_file, $log_id, "Starting ftndb-nodelist $VERSION ... ");
 
 =item -v
 
