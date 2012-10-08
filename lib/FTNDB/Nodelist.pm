@@ -137,6 +137,14 @@ sub get_nodelist_header {
 
     my (%header, $nl);
 
+    use File::stat;
+    my $fs = stat($nodelist_file);
+
+    #   year of the converted timestamp is the fifth item
+    my $file_year = (localtime($fs->mtime))[5] + 1900;
+    #   yday of converted timestamp is the seventh item
+    my $file_yday = (localtime($fs->mtime))[7] + 1;
+
     # Read in the first line of the nodelist file.
     open $nl, q{<}, $nodelist_file or croak "Cannot open $nodelist_file";
     my $header_line = <$nl>;
