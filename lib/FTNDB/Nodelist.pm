@@ -25,7 +25,8 @@ SQL database engine is one for which a DBD module exists, defaulting to SQLite.
 =head1 EXPORT
 
 The following functions are available in this module:  create_nodelist_table(),
-drop_nodelist_table(), create_ftnnode_index(), remove_ftn_domain().
+drop_nodelist_table(), create_ftnnode_index(), remove_ftn_domain(),
+nodelist_file_info().
 
 =head1 FUNCTIONS
 
@@ -122,16 +123,16 @@ sub remove_ftn_domain {
 
 }
 
-=head2 get_nodelist_header
+=head2 nodelist_file_info
 
-Syntax:  %nodelist_header = get_nodelist_header($nodelist_file);
+Syntax:  %nodelist_info = nodelist_file_info($nodelist_file);
 
 Returns a hash containing the header information from a nodelist file when given
 the file name and path for an FTN nodelist file.
 
 =cut
 
-sub get_nodelist_header {
+sub nodelist_file_info {
 
     my $nodelist_file = @_;
 
