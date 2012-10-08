@@ -1,7 +1,8 @@
 Revision history for FTN Database application (ftndb)
 
-0.37    Mon Oct  8 11:55 2012
-    - Start v0.37 development
+0.37    Mon Oct  8 14:52 2012
+    - Add insertion of the "ftnyear" & "yearday" fields to those being inserted
+      for each nodelist row in the database.
 
 0.36    Mon Oct  8 11:26 2012
     - Add a nodelist_file_info function to lib/FTNDB/Nodelist.pm for providing
