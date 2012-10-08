@@ -127,8 +127,35 @@ sub remove_ftn_domain {
 
 Syntax:  %nodelist_info = nodelist_file_info($nodelist_file);
 
-Returns a hash containing the header information from a nodelist file when given
-the file name and path for an FTN nodelist file.
+Returns a hash containing the header and other information for a nodelist file
+when given the file name and path for an FTN nodelist file. The possible keys
+returned in the hash are as follows:
+
+=over 4
+
+=item Year
+
+The four digit year from the nodelist file header line. Defaults to the year
+number from the nodelist file time stamp.
+
+=item YearDay
+
+The year day number from the nodelist file header line. Defaults to the file
+suffix of the nodelist, which is assumed to be a three digit number.
+
+=item FileYear
+
+The four digit year number from the timestamp of the nodelist file.
+
+=item FileYDay
+
+The year day number from the timestamp of the nodelist file.
+
+=item HeaderLine
+
+The header line (first line) from the nodelist file as a string.
+
+=back
 
 =cut
 
