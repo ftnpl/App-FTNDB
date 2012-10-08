@@ -161,7 +161,7 @@ The header line (first line) from the nodelist file as a string.
 
 sub nodelist_file_info {
 
-    my $nodelist_file = @_;
+    my $nodelist_file = shift;
 
     my (%info, $nl);
 
