@@ -1,0 +1,21 @@
+Description: Patch to enabled building using git-buildpackage.
+Author: Robert James Clay <jame@rocasa.us>
+
+--- ftndb-0.37.orig/MANIFEST
++++ ftndb-0.37/MANIFEST
+@@ -15,4 +15,3 @@ lib/FTNDB/Command/drop.pm
+ t/00-load.t
+ t/pod-coverage.t
+ t/pod.t
+-META.yml                                 Module meta-data (added by MakeMaker)
+--- /dev/null
++++ ftndb-0.37/doc/file_id.diz
+@@ -0,0 +1,7 @@
++ftndb
++Scripts and associated Modules which can be
++used for Fidonet/FTN related processing in an
++SQL database supported by a Perl DBD module,
++defaulting to SQLite, and which includes FTN
++Nodelist processing. See README and other
++documentation for more information. Requires
++FTN-Database Perl module.
