@@ -1,0 +1,38 @@
+Source: ftndb
+Section: perl
+Priority: optional
+Maintainer: Robert James Clay <jame@rocasa.us>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: libapp-cmd-perl,
+ libconfig-tiny-perl,
+ libdbd-sqlite3-perl,
+ libdbi-perl,
+ libfile-spec-perl | perl-base,
+ libftn-database-perl (>= 0.34),
+ libftn-log-perl (>= 0.02),
+ libtest-pod-coverage-perl (>= 1.08),
+ libtest-pod-perl (>= 1.22),
+ perl,
+ perl-modules
+Standards-Version: 3.9.2
+Vcs-Browser: http://http://sourceforge.net/p/ftnpl/ftndb/code
+Vcs-Git: git://git.code.sf.net/p/ftnpl/ftndb/code
+Homepage: http://search.cpan.org/dist/ftndb/
+
+Package: ftndb
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ libapp-cmd-perl,
+ libconfig-tiny-perl,
+ libdbd-sqlite3-perl,
+ libdbi-perl,
+ libfile-spec-perl | perl-base,
+ libftn-database-perl (>= 0.34),
+ libftn-log-perl (>= 0.02),
+ libtest-pod-coverage-perl (>= 1.08),
+ libtest-pod-perl (>= 1.22),
+ perl-modules
+Description: Application for Fidonet/FTN related processing in an SQL database supported by a Perl DBD module.
+ This is the top level Perl extension for the administration of databases for
+ Fidonet/FTN related processing. The SQL database engine is one for which a
+ DBD module exists, defaulting to SQLite.
