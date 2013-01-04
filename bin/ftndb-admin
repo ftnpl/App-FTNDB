@@ -8,7 +8,7 @@ use Config::Tiny;
 use File::Spec;
 
 use FTN::Database qw(&create_ftn_database &drop_ftn_database &open_ftn_database &close_ftn_database &create_ftn_index &drop_ftn_index);
-use FTNDB::Nodelist qw(&create_nodelist_table &drop_nodelist_table);
+use App::FTNDB::Nodelist qw(&create_nodelist_table &drop_nodelist_table);
 use FTN::Log qw(&logging);
 
 $Getopt::Std::STANDARD_HELP_VERSION = 1;
@@ -494,7 +494,7 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 SEE ALSO
 
- L<FTN::Database>, L<FTNDB::Nodelist>, and L<ftndb-nodelist>.
+ L<FTN::Database>, L<App::FTNDB::Nodelist>, and L<ftndb-nodelist>.
 
 =head1 COPYRIGHT & LICENSE
 

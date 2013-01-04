@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-use FTNDB;
-FTNDB->run;
+use App::App::FTNDB;
+App::App::FTNDB->run;
 
 =head1 NAME
 
@@ -83,7 +83,7 @@ the name of the table to be dropped.
 
 =head1 CONFIGURATION
 
-See L<FTNDB::Config> for details regarding configuration of
+See L<App::App::FTNDB::Config> for details regarding configuration of
 the application.
 
 
@@ -138,8 +138,8 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTN::Database>, L<FTNDB::Config>
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
+  L<App::FTNDB::Command::drop>, L<FTN::Database>, L<App::FTNDB::Config>
 
 =head1 COPYRIGHT & LICENSE
 

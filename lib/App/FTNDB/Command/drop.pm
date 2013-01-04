@@ -1,9 +1,9 @@
-package FTNDB::Command::create;
-use FTNDB -command;
+package App::FTNDB::Command::drop;
+use App::FTNDB -command;
 
 =head1 NAME
 
-FTNDB::Command::create - The create command for Fidonet/FTN related SQL Database processing.
+App::FTNDB::Command::drop - The drop command for Fidonet/FTN Database processing.
 
 =head1 DESCRIPTION
 
@@ -14,23 +14,21 @@ database engine is one for which a DBD module exists, defaulting to SQLite.
 
 =over
 
-=item create database name
+=item drop database name
 
-C<ftndbadm -c config_file [options] create database name>
+C<ftndbadm -c config_file [options] drop database name>
 
-This will create a database an SQL database server being used
-for Fidonet/FTN processing, where I<name> is the name of the
-database to be created. If it already exists, it will drop
-it first, before going on to create it again.
+This will drop a database if it exists in an SQL database server
+being used for Fidonet/FTN processing, where I<name> is the name
+of the database to be dropped.
 
-=item create table name
+=item drop table name
 
-C<ftndbadm -c config_file [options] create table name>
+C<ftndbadm -c config_file [options] drop table name>
 
-This will create a nodelist table in an SQL database being used
-for Fidonet/FTN nodelist processing, where I<name> is the name
-of the table to be created. If it already exists, it will be
-dropped first before going on to create it again.
+This will drop a database table if it exists in an SQL database
+server being used for Fidonet/FTN processing, where I<name> is
+the name of the table to be dropped.
 
 =back
 
@@ -55,7 +53,7 @@ Execute the command
 sub execute {
     my ($self, $opt, $args) = @_;
 
-    print "The create command is not yet implemented.\n";
+    print "The drop command is not yet implemented.\n";
 
 }
 
@@ -75,16 +73,15 @@ as I make changes.
 Note that you can also report any bugs or feature requests to
 C<bug-ftndb at rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
-however, the FTN Database application Issue tracker at the 
-SourceForge project is preferred.
+however, the FTN Database application  Issue tracker at the
+SoureForge project is preferred.
 
 
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB::Command::create
-
+    perldoc App::FTNDB::Command::drop
 
 You can also look for information at:
 
@@ -107,7 +104,7 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::drop>,
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
   L<FTN::Database>, L<FTN::Database::Nodelist>
 
 

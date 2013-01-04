@@ -1,4 +1,4 @@
-package FTNDB;
+package App::FTNDB;
 use App::Cmd::Setup -app;
 
 =head1 NAME

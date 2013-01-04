@@ -8,7 +8,7 @@ use Config::Tiny;
 use File::Spec;
 
 use FTN::Database qw(&open_ftn_database &close_ftn_database &create_ftn_index &drop_ftn_index);
-use FTNDB::Nodelist;
+use App::FTNDB::Nodelist;
 use FTN::Log qw(&logging);
 
 $Getopt::Std::STANDARD_HELP_VERSION = 1;
@@ -28,7 +28,7 @@ our $VERSION = '0.37';
 =head1 DESCRIPTION
 
 This script both provides an example of using the FTN::Database and
-FTNDB::Nodelist modules as well as providing some basic
+App::FTNDB::Nodelist modules as well as providing some basic
 functionality related to using an SQL Database for Fidonet/FTN related
 processing.  The SQL Database engine is one for which a DBD module exists,
 defaulting to SQLite.
@@ -347,7 +347,7 @@ sub create_ftn_nodelist_table {
     FTN::Database::drop_ftn_table($db_handle, $table_name);
 
     # Create nodelist table
-    FTNDB::Nodelist::create_nodelist_table($db_handle, $table_name, $db_option{'Type'});
+    App::FTNDB::Nodelist::create_nodelist_table($db_handle, $table_name, $db_option{'Type'});
 
     # Creating Index
     my $index_name = 'ftnnode';
@@ -394,7 +394,7 @@ sub load_ftn_nodelist {
     logging($log_file, $log_id, "Nodelist directory: '$nodelist_directory'");
     logging($log_file, $log_id, "Nodelist file: '$nodelist_file'");
 
-    my %nl_info = FTNDB::Nodelist::nodelist_file_info("$nodelist_directory/$nodelist_file");
+    my %nl_info = App::FTNDB::Nodelist::nodelist_file_info("$nodelist_directory/$nodelist_file");
 
     open NODELIST, "$nodelist_directory/$nodelist_file"
     or die logging($log_file, $log_id, "Cannot open $nodelist_directory/$nodelist_file");
@@ -762,7 +762,7 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 SEE ALSO
 
- L<FTN::Database>, L<FTNDB::Nodelist>, and L<ftndb-admin>.
+ L<FTN::Database>, L<App::FTNDB::Nodelist>, and L<ftndb-admin>.
 
 =head1 COPYRIGHT & LICENSE
 

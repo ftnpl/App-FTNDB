@@ -1,4 +1,4 @@
-package FTNDB::Nodelist;
+package App::FTNDB::Nodelist;
 
 use warnings;
 use strict;
@@ -6,7 +6,7 @@ use Carp qw( croak );
 
 =head1 NAME
 
-FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
+App::FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
 
 =head1 VERSION
 
@@ -18,7 +18,7 @@ our $VERSION = '0.37';
 
 =head1 DESCRIPTION
 
-FTNDB::Nodelist is a Perl module containing common nodelist related subroutines
+App::FTNDB::Nodelist is a Perl module containing common nodelist related subroutines
 for Fidonet/FTN Nodelist related processing on a Nodelist table in an SQL Database. The
 SQL database engine is one for which a DBD module exists, defaulting to SQLite.
 
@@ -196,7 +196,7 @@ An example of opening an FTN database, then creating a nodelist table,
 loading data to it, then creating an index on it, and the closing
 the database:
 
-    use FTNDB::Nodelist;
+    use App::FTNDB::Nodelist;
 
     my $db_handle = open_ftn_database(\%db_option);
     create_nodelist_table($db_handle, $table_name);
@@ -226,7 +226,7 @@ SourceForge project  is preferred.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB::Nodelist
+    perldoc App::FTNDB::Nodelist
 
 
 You can also look for information at:
@@ -261,4 +261,4 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of FTNDB::Nodelist
+1; # End of App::FTNDB::Nodelist
