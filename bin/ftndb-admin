@@ -8,7 +8,7 @@ use Config::Tiny;
 use File::Spec;
 
 use FTN::Database qw(&create_ftn_database &drop_ftn_database &open_ftn_database &close_ftn_database &create_ftn_index &drop_ftn_index);
-use FTNDB::Nodelist qw(&create_nodelist_table &drop_nodelist_table);
+use App::FTNDB::Nodelist qw(&create_nodelist_table &drop_nodelist_table);
 use FTN::Log qw(&logging);
 
 $Getopt::Std::STANDARD_HELP_VERSION = 1;
@@ -19,11 +19,11 @@ ftndb-admin - Administration of an SQL database for Fidonet/FTN processing.
 
 =head1 VERSION
 
-Version 0.37
+Version 0.38
 
 =cut
 
-our $VERSION = '0.37';
+our $VERSION = '0.38';
 
 =head1 DESCRIPTION
 
@@ -462,7 +462,7 @@ as I make changes.
 
 Note that you can also report any bugs or feature requests to
 C<bug-ftndb at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-FTNDB>;
 however, the FTN Database application Issue tracker at the
 SourceForge project is preferred.
 
@@ -484,21 +484,21 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 
 =head1 SEE ALSO
 
- L<FTN::Database>, L<FTNDB::Nodelist>, and L<ftndb-nodelist>.
+ L<FTN::Database>, L<App::FTNDB::Nodelist>, and L<ftndb-nodelist>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010-2012 Robert James Clay, all rights reserved.
+Copyright 2010-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -1,4 +1,4 @@
-package FTNDB::Nodelist;
+package App::FTNDB::Nodelist;
 
 use warnings;
 use strict;
@@ -6,19 +6,19 @@ use Carp qw( croak );
 
 =head1 NAME
 
-FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
+App::FTNDB::Nodelist - Fidonet/FTN Nodelist SQL Database operations.
 
 =head1 VERSION
 
-Version 0.37
+Version 0.38
 
 =cut
 
-our $VERSION = '0.37';
+our $VERSION = '0.38';
 
 =head1 DESCRIPTION
 
-FTNDB::Nodelist is a Perl module containing common nodelist related subroutines
+App::FTNDB::Nodelist is a Perl module containing common nodelist related subroutines
 for Fidonet/FTN Nodelist related processing on a Nodelist table in an SQL Database. The
 SQL database engine is one for which a DBD module exists, defaulting to SQLite.
 
@@ -196,7 +196,7 @@ An example of opening an FTN database, then creating a nodelist table,
 loading data to it, then creating an index on it, and the closing
 the database:
 
-    use FTNDB::Nodelist;
+    use App::FTNDB::Nodelist;
 
     my $db_handle = open_ftn_database(\%db_option);
     create_nodelist_table($db_handle, $table_name);
@@ -226,7 +226,7 @@ SourceForge project  is preferred.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB::Nodelist
+    perldoc App::FTNDB::Nodelist
 
 
 You can also look for information at:
@@ -239,11 +239,11 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 
@@ -253,7 +253,7 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010-2012 Robert James Clay, all rights reserved.
+Copyright 2010-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
@@ -261,4 +261,4 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of FTNDB::Nodelist
+1; # End of App::FTNDB::Nodelist

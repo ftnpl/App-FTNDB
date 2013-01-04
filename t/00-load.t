@@ -3,10 +3,10 @@
 use Test::More tests => 4;
 
 BEGIN {
-    use_ok( 'FTNDB' );
-    use_ok( 'FTNDB::Nodelist' );
-    use_ok( 'FTNDB::Command::create' );
-    use_ok( 'FTNDB::Command::drop' );
+    use_ok( 'App::FTNDB' );
+    use_ok( 'App::FTNDB::Nodelist' );
+    use_ok( 'App::FTNDB::Command::create' );
+    use_ok( 'App::FTNDB::Command::drop' );
 }
 
-diag( "Testing FTN DB Application $FTNDB::VERSION, Perl $], $^X" );
+diag( "Testing FTN DB Application $App::FTNDB::VERSION, Perl $], $^X" );

@@ -1,9 +1,8 @@
-=head1 FTN Database application To Do
-
+=head1 App::App::FTNDB To Do
 
 =head2 General
 
-Create FTNDB::Examples for example configuration files and scripts?
+Create App::FTNDB::Examples for example configuration files and scripts?
 
 Move code repository information and the distribution archive information
 from the README file to elsewhere;  POD in modules and scripts is where
@@ -26,7 +25,7 @@ least initially having the name ftndbadm.  Move the functionality currently
 in the ftndb-admin script to the new ftndbadm script.
 
 
-=head2 FTNDB::Command::drop.pm
+=head2 App::FTNDB::Command::drop.pm
 
 As part of the transition to using App::Cmd; move the functionality for the
 I<drop> command from bin/ftndb-admin to the new module for the drop command.
@@ -35,7 +34,7 @@ Besides functionality for dropping databases and tables by their names, add
 being able to drop an index by name.
 
 
-=head2 FTNDB::Command::create.pm
+=head2 App::FTNDB::Command::create.pm
 
 As part of the transition to using App::Cmd; move the functionality for the
 I<create> command from bin/ftndb-admin to the new module for the create command.
@@ -45,7 +44,7 @@ nodelist table ("-s" as noted above?); perhaps also add a configuration option
 for the same thing?
 
 
-=head2 FTNDB::Nodelist
+=head2 App::FTNDB::Nodelist
 
 After create_ftn_table is available: rewrite create_nodelist_table to use that
 and the new define_nodelist_table function.
@@ -130,8 +129,8 @@ been moved to ftndbadm.
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTNDB::Nodelist>, L<FTN::Database>, L<FTN::Database::Nodelist>
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
+  L<App::FTNDB::Command::drop>, L<App::FTNDB::Nodelist>, L<FTN::Database>, L<FTN::Database::Nodelist>
 
 =head1 AUTHOR
 
@@ -139,7 +138,7 @@ Robert James Clay, C<< <jame at rocasa.us> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Robert James Clay, all rights reserved.
+Copyright 2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -1,4 +1,7 @@
-Revision history for FTN Database application (ftndb)
+Revision history for FTN Database application (App-FTNDB)
+
+0.38    Fri Jan  4 17:10 2013
+    - Rename application from 'FTNDB' to 'App::FTNDB'
 
 0.37    Mon Oct  8 14:52 2012
     - Add insertion of the "ftnyear" & "yearday" fields to those being inserted

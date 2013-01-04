@@ -1,6 +1,6 @@
 =head1 NAME
 
-FTNDB::Config - Fidonet/FTN SQL Database application configuration.
+App::FTNDB::Config - Fidonet/FTN SQL Database application configuration.
 
 
 =head1 DESCRIPTION
@@ -96,7 +96,7 @@ however, the ftndb Issue tracker is preferred.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB::Config
+    perldoc App::FTNDB::Config
 
 
 You can also look for information at:
@@ -109,22 +109,22 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTN::Database>, L<FTN::Database::Nodelist>
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
+  L<App::FTNDB::Command::drop>, L<FTN::Database>, L<FTN::Database::Nodelist>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Robert James Clay, all rights reserved.
+Copyright 2012-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
