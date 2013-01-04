@@ -1,9 +1,9 @@
-package FTNDB::Command::drop;
-use FTNDB -command;
+package App::FTNDB::Command::drop;
+use App::FTNDB -command;
 
 =head1 NAME
 
-FTNDB::Command::drop - The drop command for Fidonet/FTN Database processing.
+App::FTNDB::Command::drop - The drop command for Fidonet/FTN Database processing.
 
 =head1 DESCRIPTION
 
@@ -72,7 +72,7 @@ as I make changes.
 
 Note that you can also report any bugs or feature requests to
 C<bug-ftndb at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-FTNDB>;
 however, the FTN Database application  Issue tracker at the
 SoureForge project is preferred.
 
@@ -81,7 +81,7 @@ SoureForge project is preferred.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB::Command::drop
+    perldoc App::FTNDB::Command::drop
 
 You can also look for information at:
 
@@ -93,24 +93,24 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
   L<FTN::Database>, L<FTN::Database::Nodelist>
 
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Robert James Clay, all rights reserved.
+Copyright 2012-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

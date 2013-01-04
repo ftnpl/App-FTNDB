@@ -1,8 +1,8 @@
-Fidonet/FTN Database Application (ftndb)
+Fidonet/FTN Database Application (App-FTNDB)
 
-Scripts and associated Modules which can be used for Fidonet/FTN related
-processing in an SQL database supported by a Perl DBD module, defaulting
-to SQLite, and which includes FTN Nodelist processing.
+Scripts and the associated Modules which can be used for Fidonet/FTN related
+processing in an SQL database supported by a Perl DBD module, defaulting to
+SQLite, and which includes FTN Nodelist processing.
 
 Required, neccessary and/or useful modules, etc.:
 
@@ -41,10 +41,10 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this application with
 the perldoc command.
 
-    perldoc FTNDB
-    perldoc FTNDB::Config
-    perldoc FTNDB::Nodelist
-    perldoc FTNDB::ToDo
+    perldoc App::FTNDB
+    perldoc App::FTNDB::Config
+    perldoc App::FTNDB::Nodelist
+    perldoc App::FTNDB::ToDo
     perldoc ftndbadm
     perldoc ftndb-admin
     perldoc ftndb-nodelist
@@ -58,7 +58,7 @@ You can also look for information at:
         http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb
 
     Search CPAN
-        http://search.cpan.org/dist/ftndb
+        http://search.cpan.org/dist/App-FTNDB
 
 
 The FTN Database application is hosted at the 'Perl for FTN Systems' project
@@ -80,7 +80,7 @@ the commit id can obtained like as follows:
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2012 Robert James Clay
+Copyright (C) 2012-2013 Robert James Clay
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

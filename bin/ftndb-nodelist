@@ -8,7 +8,7 @@ use Config::Tiny;
 use File::Spec;
 
 use FTN::Database qw(&open_ftn_database &close_ftn_database &create_ftn_index &drop_ftn_index);
-use FTNDB::Nodelist;
+use App::FTNDB::Nodelist;
 use FTN::Log qw(&logging);
 
 $Getopt::Std::STANDARD_HELP_VERSION = 1;
@@ -19,16 +19,16 @@ ftndb-nodelist - Fidonet/FTN Nodelist related processing using an SQL Database.
 
 =head1 VERSION
 
-Version 0.37
+Version 0.38
 
 =cut
 
-our $VERSION = '0.37';
+our $VERSION = '0.38';
 
 =head1 DESCRIPTION
 
 This script both provides an example of using the FTN::Database and
-FTNDB::Nodelist modules as well as providing some basic
+App::FTNDB::Nodelist modules as well as providing some basic
 functionality related to using an SQL Database for Fidonet/FTN related
 processing.  The SQL Database engine is one for which a DBD module exists,
 defaulting to SQLite.
@@ -347,7 +347,7 @@ sub create_ftn_nodelist_table {
     FTN::Database::drop_ftn_table($db_handle, $table_name);
 
     # Create nodelist table
-    FTNDB::Nodelist::create_nodelist_table($db_handle, $table_name, $db_option{'Type'});
+    App::FTNDB::Nodelist::create_nodelist_table($db_handle, $table_name, $db_option{'Type'});
 
     # Creating Index
     my $index_name = 'ftnnode';
@@ -394,7 +394,7 @@ sub load_ftn_nodelist {
     logging($log_file, $log_id, "Nodelist directory: '$nodelist_directory'");
     logging($log_file, $log_id, "Nodelist file: '$nodelist_file'");
 
-    my %nl_info = FTNDB::Nodelist::nodelist_file_info("$nodelist_directory/$nodelist_file");
+    my %nl_info = App::FTNDB::Nodelist::nodelist_file_info("$nodelist_directory/$nodelist_file");
 
     open NODELIST, "$nodelist_directory/$nodelist_file"
     or die logging($log_file, $log_id, "Cannot open $nodelist_directory/$nodelist_file");
@@ -731,7 +731,7 @@ as I make changes.
 
 Note that you can also report any bugs or feature requests to
 C<bug-ftndb at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-FTNDB>;
 however, the FTN Database application issue tracker at the
 SourceForge project is preferred.
 
@@ -752,21 +752,21 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 
 =head1 SEE ALSO
 
- L<FTN::Database>, L<FTNDB::Nodelist>, and L<ftndb-admin>.
+ L<FTN::Database>, L<App::FTNDB::Nodelist>, and L<ftndb-admin>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010-2012 Robert James Clay, all rights reserved.
+Copyright 2010-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
