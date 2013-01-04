@@ -253,7 +253,7 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010-2012 Robert James Clay, all rights reserved.
+Copyright 2010-2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
