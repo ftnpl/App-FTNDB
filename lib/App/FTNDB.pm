@@ -3,7 +3,7 @@ use App::Cmd::Setup -app;
 
 =head1 NAME
 
-FTNDB - Administration of SQL databases for Fidonet/FTN processing.
+App::FTNDB - Administration of SQL databases for Fidonet/FTN processing.
 
 =head1 VERSION
 
@@ -22,7 +22,7 @@ DBD module exists, defaulting to SQLite.
 
 =head1 CONFIGURATION
 
-See L<FTNDB::Config> for information about configuration of the
+See L<App::FTNDB::Config> for information about configuration of the
 application.
 
 
@@ -56,7 +56,7 @@ however, the ftndb Issue tracker is preferred.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTNDB
+    perldoc App::FTNDB
 
 You can also look for information at:
 
@@ -79,8 +79,8 @@ L<http://search.cpan.org/dist/ftndb>
 
 =head1 SEE ALSO
 
- L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<FTNDB>, L<FTNDB::Command::create>,
-  L<FTNDB::Command::drop>, L<FTNDB::Nodelist>, L<FTN::Database>, L<FTN::Database::Nodelist>
+ L<ftndbadm>, L<ftndb-admim>, L<ftndb-nodelist>, L<App::FTNDB>, L<App::FTNDB::Command::create>,
+  L<App::FTNDB::Command::drop>, L<App::FTNDB::Nodelist>, L<FTN::Database>, L<FTN::Database::Nodelist>
 
 =head1 COPYRIGHT & LICENSE
 

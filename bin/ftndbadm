@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-use App::App::FTNDB;
-App::App::FTNDB->run;
+use App::FTNDB;
+App::FTNDB->run;
 
 =head1 NAME
 
@@ -107,7 +107,7 @@ as I make changes.
 
 Note that you can also report any bugs or feature requests to
 C<bug-ftndb at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftndb>;
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-FTBDB>;
 however, the ftndb Issue tracker is preferred.
 
 
@@ -128,11 +128,11 @@ L<https://sourceforge.net/p/ftnpl/ftndb/tickets/>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftndb>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-FTNDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ftndb>
+L<http://search.cpan.org/dist/App-FTNDB>
 
 =back
 

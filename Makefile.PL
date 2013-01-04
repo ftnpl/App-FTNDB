@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'ftndb',
+    NAME                => 'App-FTNDB',
     AUTHOR              => 'Robert James Clay <jame@rocasa.us>',
     VERSION_FROM        => 'lib/App/FTNDB.pm',
     ABSTRACT            => 'Application for Fidonet/FTN related processing in an SQL database supported by a Perl DBD module.',
