@@ -1,0 +1,18 @@
+language: perl
+perl:
+  - '5.14'
+  - '5.16'
+  - '5.18'
+  - '5.20'
+  - '5.22'
+before_install:
+   - "cpanm DBI"
+   - "cpanm DBD::SQLite"
+   - "cpanm Test::More"
+   - "cpanm FTN::Database"
+   - "cpanm Test::Pod"
+   - "cpanm Test::Pod::Coverage"
+   - "cpanm Devel::Cover::Report::Coveralls"
+
+script:
+   perl Makefile.PL && make test && cover -test -report coveralls

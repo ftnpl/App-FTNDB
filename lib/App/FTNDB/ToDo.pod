@@ -1,19 +1,19 @@
-=head1 App::App::FTNDB To Do
+=head1 App::FTNDB To Do
 
 =head2 General
 
 Create App::FTNDB::Examples for example configuration files and scripts?
 
-Move code repository information and the distribution archive information
-from the README file to elsewhere;  POD in modules and scripts is where
-I've been putting it, so the README really only needs to reference the 
-documentation.
+Move code repository information and the distribution archive information from
+the README file to elsewhere, like I already did with FTN::Database v0.41; the
+POD in lib/FTN/Database.pm is where I put it there, so need to decide there to
+put for for this.  Main script and module?
 
 Add an option, like -r, for specifying a region number; to be used like the
 zone (-z) or net (-n) options, and available to all commands as needed.
 
-Add script option for referencing an sql string for things like defining a table
-or other definitions.  Is "-s" already being used?
+Add script option for referencing an sql string for things like defining a
+table or other definitions.  Is "-s" already being used?
 
 Use Test::Database in test scripts?
 
@@ -138,7 +138,7 @@ Robert James Clay, C<< <jame at rocasa.us> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013 Robert James Clay, all rights reserved.
+Copyright 2012 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
