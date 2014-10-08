@@ -1,5 +1,9 @@
 Revision history for FTN Database application (App-FTNDB)
 
+0.39    Wed Oct  8 06:55 2014
+    - Add initial version of MANIFEST.SKIP file.
+    - Add initial version of '.travis.yml' for use at GitHub mirror.
+
 0.38    Fri Jan  4 17:10 2013
     - Rename application from 'FTNDB' to 'App::FTNDB'
 
