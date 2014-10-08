@@ -7,11 +7,11 @@ App::FTNDB - Administration of SQL databases for Fidonet/FTN processing.
 
 =head1 VERSION
 
-Version 0.38
+Version 0.39
 
 =cut
 
-our $VERSION = '0.38';
+our $VERSION = '0.39';
 
 =head1 DESCRIPTION
 
